@@ -1,0 +1,95 @@
+<app-navbar></app-navbar>
+<section class="vh-100" style="background-image: url('https://slikarske-boje.co.rs/wp-content/uploads/elementor/thumbs/acryl-profy-svetlo-zuta-o2eyoppll6zcg88ybpgls2holxtvnl4o83ftcprooo.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+  <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-5 d-none d-xl-block">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+              </div>
+              <div class="col-xl-6" >
+                <form [formGroup]="addForm" (ngSubmit)="createApplication()">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase">Apliciraj za posao</h3>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="text" id="form3Example1m" class="form-control form-control-lg" [formControlName] = "'ime'"/>
+                        <label class="form-label" for="form3Example1m">Ime *</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="text" id="form3Example1n" class="form-control form-control-lg" [formControlName] = "'prezime'"/>
+                        <label class="form-label" for="form3Example1n">Prezime *</label>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="text" id="form3Example1m1" class="form-control form-control-lg"[formControlName] = "'email'" />
+                        <label class="form-label" for="form3Example1m1">Email *</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="text" id="form3Example1n1" class="form-control form-control-lg" [formControlName] = "'number'"/>
+                        <label class="form-label" for="form3Example1n1">Broj telefona *</label>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="text" id="form3Example1m1" class="form-control form-control-lg" [formControlName] = "'srednjaSkola'"/>
+                        <label class="form-label" for="form3Example1m1">Srednja Skola *</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="text" id="form3Example1n1" class="form-control form-control-lg" [formControlName] = "'fakultet'"/>
+                        <label class="form-label" for="form3Example1n1">Fakultet (opciono)</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col-md-6">
+                      <input type="file" (change)="onFileSelected($event)" accept="application/pdf" />
+                      <label class="form-label">Izaberi PDF dokument *</label>
+                    </div>
+                  </div>
+                  
+                  
+  
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form3Example9" class="form-control form-control-lg" [formControlName] = "'address'"/>
+                    <label class="form-label" for="form3Example9">Adresa stanovanja *</label>
+                  </div>
+  
+                  <div class="d-flex justify-content-end pt-3">
+                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg" ><a class="nav-link" [routerLink]="['/homePage']">Otkazi</a></button>
+                    <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2">Apliciraj</button>
+                  </div>
+  
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="alert alert-danger position-fixed top-0 start-0 m-2" role="alert" [hidden]="!showAlert">
+        Došlo je do greške, pokušajte ponovo.
+      </div>
+      <div class="alert alert-success position-fixed top-0 start-0 m-2" role="alert" [hidden]="!showAlertSuccess">
+        Prijava uspešna.
+      </div>
+  </section>

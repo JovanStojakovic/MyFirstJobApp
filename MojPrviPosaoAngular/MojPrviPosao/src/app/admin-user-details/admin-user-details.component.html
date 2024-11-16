@@ -1,0 +1,58 @@
+<section class="credit-card" style="background-image: url('https://slikarske-boje.co.rs/wp-content/uploads/elementor/thumbs/acryl-profy-svetlo-zuta-o2eyoppll6zcg88ybpgls2holxtvnl4o83ftcprooo.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+    <div class="container">
+        <div class="card-holder">
+            <div class="card-box bg-news">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="img-box">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <form>
+                            <div class="card-details">
+                                <h3 class="title">Informacije o korisniku</h3>
+
+                                <div class="row" *ngIf="user; else loadingTemplate">
+                                    <div class="form-group col-sm-12">
+                                        <div class="inner-addon right-addon">
+                                            <label for="card-holder">Ime i Prezime</label>
+                                            <i class="far fa-user"></i>
+                                            <label id="name" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">{{user.name}} {{user.surname}}</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-12">
+                                        <div class="inner-addon right-addon">
+                                            <label for="username">Korisničko Ime</label>
+                                            <i class="far fa-user"></i>
+                                            <label id="username" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">{{user.username}}</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-12">
+                                        <div class="inner-addon right-addon">
+                                            <label for="email-phone">Email i Broj telefona</label>
+                                            <i class="far fa-credit-card"></i>
+                                            <label id="email" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">{{user.email}} {{user.phone}}</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-12">
+                                        <div class="inner-addon right-addon">
+                                            <label for="birthdate">Datum Rođenja</label>
+                                            <i class="far fa-credit-card"></i>
+                                            <label id="date" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">{{user.birthDate}}</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-12">
+                                        <button type="button" class="btn btn-custom btn-block" (click)="suspUser()">Suspenduj</button>
+                                    </div>
+                                </div>
+                                <ng-template #loadingTemplate>
+                                    <p>Učitavanje informacija o korisniku...</p>
+                                </ng-template>
+                            </div>
+                        </form>
+                    </div><!--/col-lg-6 -->
+                </div><!--/row -->
+            </div><!--/card-box -->
+        </div><!--/card-holder -->
+    </div><!--/container -->
+</section>

@@ -1,0 +1,17 @@
+
+<div class="list-group">
+  <button type="button" class="list-group-item list-group-item-action active">
+    Moje Kompanije
+  </button>
+  
+  <button 
+    *ngFor="let company of companies" 
+    class="list-group-item list-group-item-action">
+    <a href='/companyUserDetails/{{company.id}}' class="stretched-link"></a>
+    {{ company.name }}
+  </button>
+</div>
+
+<div *ngIf="companies.length === 0">
+  <p>Korisnik nema registrovanih kompanija.</p>
+</div>

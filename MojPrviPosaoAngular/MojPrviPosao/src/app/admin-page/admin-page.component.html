@@ -1,0 +1,69 @@
+<app-navbar></app-navbar>
+<section class="vh-100 spacing" style="background-image: url('https://slikarske-boje.co.rs/wp-content/uploads/elementor/thumbs/acryl-profy-svetlo-zuta-o2eyoppll6zcg88ybpgls2holxtvnl4o83ftcprooo.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card ccard radius-t-0 h-100">
+                    <div class="position-tl w-102 border-t-3 brc-primary-tp3 ml-n1px mt-n1px"></div>
+                    <!-- the blue line on top -->
+
+                    <div class="card-header pb-3 brc-secondary-l3">
+                        <h5 class="card-title mb-2 mb-md-0 text-dark-m3">
+                            Svi Korisnici
+                        </h5>
+                    </div>
+
+                    <div class="card-body pt-2 pb-1" *ngFor="let user of users">
+                        <div role="button" class="user-card d-flex flex-wrap align-items-center bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="text-default-d3 text-90 text-600">
+                                Username: {{user.username}} ,
+                            </span>
+                            <span class="text-default-d3 text-90 text-600">
+                                Email: {{user.email}}
+                            </span>
+                            <span class="text-default-d3 text-90 text-600">
+                                Datum registracije: {{user.registrationDate}}
+                            </span>
+                            
+                            <a [routerLink]="['/adminUserDetails', user.username]" class="stretched-link"></a>
+
+
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="card ccard radius-t-0 h-100">
+                    <div class="position-tl w-102 border-t-3 brc-primary-tp3 ml-n1px mt-n1px"></div>
+                    <!-- the blue line on top -->
+
+                    <div class="card-header pb-3 brc-secondary-l3">
+                        <h5 class="card-title mb-2 mb-md-0 text-dark-m3">
+                            Sve kompanije
+                        </h5>
+                    </div>
+
+                    <div class="card-body pt-2 pb-1" *ngFor="let company of companies">
+                        <div role="button" class="user-card d-flex flex-wrap align-items-center bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                            <span class="text-default-d3 text-90 text-600">
+                                Ime kompanije: {{company.name}} ,
+                            </span>
+                            <span class="text-default-d3 text-90 text-600">
+                                Srediste: {{company.place}}
+                            </span>
+                            <span class="text-default-d3 text-90 text-600">
+                                Datum osnivanja: {{company.creationDate}}
+                            </span>
+
+                            <a href='/companyUserDetails/{{company.id}}' class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

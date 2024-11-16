@@ -1,0 +1,32 @@
+.navbar {
+    background-color: #90ee90; /* Svetlo zelena boja */
+    padding: 15px; /* Povećava visinu navigacije */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem; /* Povećava veličinu slova */
+    padding: 10px 270px; /* Povećava padding unutar linkova */
+}
+
+.nav-link.disabled {
+    opacity: 0.6; /* Blago smanjuje neaktivne linkove */
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5); /* Obeležava dugme za preklapanje */
+}
+
+.navbar-toggler-icon {
+    background-color: rgba(255, 255, 255, 0.5); /* Obeležava ikonu */
+}
+.navbar {
+    background-color: #b2e3b2; /* Svetlo zelena boja */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem; /* Povećaj veličinu slova */
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline; /* Efekat pri prelasku miša */
+}

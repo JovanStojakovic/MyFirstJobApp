@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<section class="vh-100" style="background-image: url('https://slikarske-boje.co.rs/wp-content/uploads/elementor/thumbs/acryl-profy-svetlo-zuta-o2eyoppll6zcg88ybpgls2holxtvnl4o83ftcprooo.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.css">
+  
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-lg-8">
+              <div class="ps-lg-1-6 ps-xl-5 card border shadow-lg p-4"> <!-- Dodata card, border i shadow klase -->
+                  <div class="mb-5 wow fadeIn">
+                      <div class="text-start mb-1-6 wow fadeIn">
+                          <h2 class="h1 mb-0 text-primary">{{job.name}}</h2>
+                      </div>
+                      <p>Datum kreiranja: {{job.creationDate}}
+                     
+                      <p class="mb-0"><h5> {{job.opisPosla}}</h5>
+                  </div>
+  
+                  <div class="mb-5 wow fadeIn">
+                      <div class="text-start mb-1-6 wow fadeIn">
+                          <h2 class="mb-0 text-primary">Dodatne Informacije</h2>
+                      </div>
+                      <div class="row mt-n4">
+                          <div class="col-sm-6 col-xl-4 mt-4">
+                              <div class="card text-center border-0 rounded-3 shadow-sm"> <!-- Dodata shadow-sm klasa za manji efekat -->
+                                  <div class="card-body">
+                                      <i class="ti-bookmark-alt icon-box medium rounded-3 mb-4"></i>
+                                      <h3 class="h5 mb-3">Oblast</h3>
+                                      <h3 class="h5 mb-3">{{job.jobType}}</h3>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-6 col-xl-4 mt-4">
+                              <div class="card text-center border-0 rounded-3 shadow-sm">
+                                  <div class="card-body">
+                                      <i class="ti-pencil-alt icon-box medium rounded-3 mb-4"></i>
+                                      <h3 class="h5 mb-3">Plata</h3>
+                                      <h3 class="h5 mb-3">{{job.plata}} RSD</h3>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-6 col-xl-4 mt-4">
+                              <div class="card text-center border-0 rounded-3 shadow-sm">
+                                  <div class="card-body">
+                                      <i class="ti-medall-alt icon-box medium rounded-3 mb-4"></i>
+                                      <h3 class="h5 mb-3">Datum Trajanja Konkursa</h3>
+                                      <h3 class="h5 mb-3">{{job.activeDate}}</h3>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <!-- Dodato dugme za apliciranje na dnu kartice -->
+                  <div class="text-center mt-4">
+                      <button type="button" class="btn btn-apply btn-lg" ><a class="nav-link" [routerLink]="['/addApplication', job.id]">Apliciraj</a></button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+  

@@ -1,0 +1,73 @@
+<app-navbar></app-navbar>
+<section class="vh-100" style="background-image: url('https://slikarske-boje.co.rs/wp-content/uploads/elementor/thumbs/acryl-profy-svetlo-zuta-o2eyoppll6zcg88ybpgls2holxtvnl4o83ftcprooo.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+  <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-5 d-none d-xl-block">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+              </div>
+              <div class="col-xl-6" >
+                <form [formGroup]="addForm" (ngSubmit)="addJob()">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase">Kreiraj novi posao</h3>
+  
+                  <div class="row">
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="text" id="form3Example9" class="form-control form-control-lg" formControlName="name" />
+                      <label class="form-label" for="form3Example9">Naziv Posla *</label>
+                    </div>
+    
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="text" id="form3Example9" class="form-control form-control-lg" formControlName="plata" />
+                      <label class="form-label" for="form3Example9">Plata *</label>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="text" id="form3Example9" class="form-control form-control-lg" formControlName="opisPosla" />
+                      <label class="form-label" for="form3Example9">Opis *</label>
+                  </div>
+                  <div class="row">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="date" id="form3Example1w" class="form-control"  [formControlName] = "'activeDate'"/>
+                      <label class="form-label" for="form3Example1w">Datum trajanja konkursa</label>
+                    </div>
+                    
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <select class="form-control form-control-lg" formControlName="jobType">
+                          <option value="IT_SEKTOR">IT Sektor</option>
+                          <option value="UGOSTITELJSTVO">Ugostiteljstvo</option>
+                          <option value="ELEKTOTEHNIKA">Elektotehnika</option>
+                          <option value="POLJOPRIVREDA">Poljoprivreda</option>
+                          <option value="SUMARSTVO">Šumarstvo</option>
+                        </select>
+                        <label class="form-label" for="form3Example1n1">Tip posla *</label>
+                      </div>
+                    
+                  </div> 
+                  <div class="d-flex justify-content-end pt-3">
+                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg" ><a class="nav-link" [routerLink]="['/homePage']">Otkazi</a></button>
+                    <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2">Kreiraj</button>
+                  </div>
+                  </div>
+  
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="alert alert-danger position-fixed top-0 start-0 m-2" role="alert" [hidden]="!showAlert">
+        Došlo je do greške, pokušajte ponovo.
+    </div>
+    <div class="alert alert-success position-fixed top-0 start-0 m-2" role="alert" [hidden]="!showAlertSuccess">
+       Posao je uspesno kreiran
+    </div>
+  </section>

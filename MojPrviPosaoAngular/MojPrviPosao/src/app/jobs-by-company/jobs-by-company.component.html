@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<section class="vh-100" style="background-image: url('https://slikarske-boje.co.rs/wp-content/uploads/elementor/thumbs/acryl-profy-svetlo-zuta-o2eyoppll6zcg88ybpgls2holxtvnl4o83ftcprooo.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+<div class="col-lg-10 mx-auto">
+    
+
+<div class="card mb-3" *ngFor="let job of jobs">
+  <div class="card-body">
+    <div class="d-flex flex-column flex-lg-row">
+      <span class="avatar avatar-text rounded-3 me-4 mb-2">FD</span>
+      <div class="row flex-fill">
+        <div class="col-sm-5">
+          <h5 class="h5">{{job.name}}</h5>
+          <span class="badge bg-secondary badge-separator">{{job.jobType}}</span> <span class="badge bg-success">{{job.creationDate}}</span>
+        </div>
+        <div class="col-sm-4 py-2">
+          <span class="badge bg-secondary">Plata: {{job.plata}} RSD</span>
+        </div>
+        <div class="col-sm-3 text-lg-end">
+          <a href='/jobDetails/{{job.id}}'  class="btn btn-sm btn-block btn-light">Detalji</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>

@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<section class="vh-100" style="background-image: url('https://slikarske-boje.co.rs/wp-content/uploads/elementor/thumbs/acryl-profy-svetlo-zuta-o2eyoppll6zcg88ybpgls2holxtvnl4o83ftcprooo.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+<div class="container mx-auto mt-4">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let application of applications">
+            <div class="card" style="width: 18rem;">
+                <img src="https://thumbs.dreamstime.com/b/job-application-2588230.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{application.ime}} {{application.prezime}}</h5>
+                    <h6 class="card-subtitle mb-2">{{application.email}} {{application.number}}</h6>
+                    <p class="card-text">{{application.address}}</p>
+                    <p class="card-text">{{application.srednjaSkola}}</p>
+                    <p class="card-text">{{application.fakultet}}</p>
+                    <p class="card-text">{{application.creationDate | date}}</p>
+                    <!-- Dodaj link za preuzimanje PDF fajla -->
+                    <button (click)="downloadFile(application.pdfContent, application.ime + '_' + application.prezime + '.pdf')">
+                        Preuzmi PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
