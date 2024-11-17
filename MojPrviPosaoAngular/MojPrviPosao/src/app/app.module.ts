@@ -33,6 +33,7 @@ import { JobDetailsForUserComponent } from './job-details-for-user/job-details-f
 import { JobDetailssComponent } from './job-detailss/job-detailss.component';
 import { ApplicationsByCompanyComponent } from './applications-by-company/applications-by-company.component';
 import { UpdateJobComponent } from './update-job/update-job.component';
+import { CompanyAdminDetailsComponent } from './company-admin-details/company-admin-details.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { UpdateJobComponent } from './update-job/update-job.component';
     JobDetailsForUserComponent,
     JobDetailssComponent,
     ApplicationsByCompanyComponent,
-    UpdateJobComponent
+    UpdateJobComponent,
+    CompanyAdminDetailsComponent
   ],
   imports: [
     BrowserModule,

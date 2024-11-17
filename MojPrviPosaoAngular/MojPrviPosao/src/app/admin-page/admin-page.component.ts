@@ -35,4 +35,7 @@ export class AdminPageComponent implements OnInit {
       }
     )
   }
+  checkUser(username: string) {
+    console.log('Clicked on user with username:', username);
+  }
 }

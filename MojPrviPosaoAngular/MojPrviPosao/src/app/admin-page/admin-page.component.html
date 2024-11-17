@@ -15,8 +15,8 @@
                         </h5>
                     </div>
 
-                    <div class="card-body pt-2 pb-1" *ngFor="let user of users">
-                        <div role="button" class="user-card d-flex flex-wrap align-items-center bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                    <div class="card-body pt-2 pb-1" >
+                        <div *ngFor="let user of users" role="button" class="user-card d-flex flex-wrap align-items-center bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
                             <span class="text-default-d3 text-90 text-600">
                                 Username: {{user.username}} ,
                             </span>
@@ -27,7 +27,7 @@
                                 Datum registracije: {{user.registrationDate}}
                             </span>
                             
-                            <a [routerLink]="['/adminUserDetails', user.username]" class="stretched-link"></a>
+                            <a [routerLink]="['/adminUserDetails', user.username]" class="stretched-link" (click)="checkUser(user.username)"></a>
 
 
                            
@@ -59,7 +59,7 @@
                                 Datum osnivanja: {{company.creationDate}}
                             </span>
 
-                            <a href='/companyUserDetails/{{company.id}}' class="stretched-link"></a>
+                            <a href='/companyAdminDetails/{{company.id}}' class="stretched-link"></a>
                         </div>
                     </div>
                 </div>

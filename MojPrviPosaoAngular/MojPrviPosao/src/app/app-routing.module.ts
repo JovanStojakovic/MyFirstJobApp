@@ -27,6 +27,7 @@ import { JobDetailsForUserComponent } from './job-details-for-user/job-details-f
 import { JobDetailssComponent } from './job-detailss/job-detailss.component';
 import { ApplicationsByCompanyComponent } from './applications-by-company/applications-by-company.component';
 import { UpdateJobComponent } from './update-job/update-job.component';
+import { CompanyAdminDetailsComponent } from './company-admin-details/company-admin-details.component';
 
 const routes: Routes = [
   {path: "", component: WelcomePageComponent},
@@ -55,7 +56,8 @@ const routes: Routes = [
   {path: "jobDetailsForUser/:id", component: JobDetailsForUserComponent},
   {path: "jobDetailss/:id", component: JobDetailssComponent},
   {path: "applicationByCompany/:id", component: ApplicationsByCompanyComponent},
-  {path: "updateJob/:id", component: UpdateJobComponent}
+  {path: "updateJob/:id", component: UpdateJobComponent},
+  {path: "companyAdminDetails/:id", component: CompanyAdminDetailsComponent}
 
 ];
 

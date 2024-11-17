@@ -78,10 +78,11 @@ export class AuthService {
   getAllUsers() {
     return this.httpClient.get<User[]>(`${this.apiUrl}/user/all`);
   }
-  getUserByUsername(username: string): Observable<myProfileDTO> {
-    return this.httpClient.get<myProfileDTO>(`${this.apiUrl}/auth/${username}`);
+  getUserByUsername(username: string): Observable<any>{ 
+    return this.httpClient.get<any>(`${this.apiUrl}/auth/${username}`);
   }
   suspendUser(username: string): Observable<any> {
     return this.httpClient.put(`${this.apiUrl}/user/suspend/${username}`, {}, { responseType: 'text' });
   }
 }
+
